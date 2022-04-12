@@ -1,0 +1,26 @@
+name: Mark
+version: ${project.version}
+main: cc.kafuu.plugin.mark.Mark
+api-version: 1.15
+prefix: KafuuMark
+authors: [KafuuNeko]
+description: 标记指定位置并传送
+website: https://kafuu.cc/
+
+commands:
+  mark:
+    description: 标记此处地点
+    usage: /mark [MarkName]
+
+  marks:
+    description: 以标记地点列表
+    usage: /marks
+
+  gomark:
+    description: 到指定标记的地点
+    usage: /gomark [MarkName]
+
+  delmark:
+    description: 删除指定标记的地点
+    usage: /delmark [Mark1] [Mark2] ...
+
