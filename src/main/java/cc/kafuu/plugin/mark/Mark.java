@@ -11,10 +11,12 @@ public final class Mark extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Objects.requireNonNull(getCommand("mark")).setExecutor(new CommandMark(this));
-        Objects.requireNonNull(getCommand("marks")).setExecutor(new CommandMark(this));
-        Objects.requireNonNull(getCommand("gomark")).setExecutor(new CommandMark(this));
-        Objects.requireNonNull(getCommand("delmark")).setExecutor(new CommandMark(this));
+        CommandMark command = new CommandMark(this);
+        Objects.requireNonNull(getCommand("mark")).setExecutor(command);
+        Objects.requireNonNull(getCommand("marks")).setExecutor(command);
+        Objects.requireNonNull(getCommand("gomark")).setExecutor(command);
+        Objects.requireNonNull(getCommand("delmark")).setExecutor(command);
+
     }
 
     @Override
